@@ -1,0 +1,85 @@
+\mode<presentation>
+
+\setbeamercolor*{header}{parent=palette primary}
+\setbeamercolor*{footer}{parent=normal text}
+
+%%% HEADERS
+
+% Lack of header
+
+\defbeamertemplate*{headline}{noheader}
+{%
+  \hbox{%
+    \includegraphics[height=11.5ex,width=0ex]{ppt/media/image6.png}
+    \hfill
+  }%
+}
+
+% Transparent logo in English
+
+\defbeamertemplate*{headline}{englogoheader}
+{
+  \hbox{%
+    \includegraphics[height=11.5ex,keepaspectratio]{ppt/media/image6.png}
+    \hfill
+  }%
+}
+
+% Transparent logo in Russian
+
+\defbeamertemplate*{headline}{rulogoheader}
+{
+  \hbox{%
+    \includegraphics[height=11.5ex,keepaspectratio]{ppt/media/image3.png}
+    \hfill
+  }%
+}
+
+% Normal header
+
+\defbeamertemplate*{headline}{logoheader theme}
+{
+  \begin{beamercolorbox}[wd=\paperwidth,ht=11.5ex,dp=0ex,left]{header}%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.40\paperwidth,ht=11.5ex,dp=0ex,left]{header}%
+    \includegraphics[height=11.5ex,keepaspectratio]{ppt/media/image4.png}
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.45\paperwidth,ht=11.5ex,dp=0ex,right]{header}%
+    \vbox to11.5ex{\vfil\parbox{.45\paperwidth}{%
+      \raggedleft%
+      \scriptsize\usebeamerfont{title in head/foot}\beamer@shorttitle
+    }\vfil}%
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.15\paperwidth,ht=11.5ex,dp=0ex,center]{header}%
+    \vbox to11.5ex{%
+      \vfil\hbox{\insertframenumber{} / \inserttotalframenumber}%
+    \vfil}%
+  \end{beamercolorbox}
+  }%
+  \end{beamercolorbox}%
+}
+
+%%% SIDEBARS
+
+% Sidebar without logo
+
+\defbeamertemplate*{sidebar right}{nologo}
+{
+  \vfill%
+  \llap{\usebeamertemplate***{navigation symbols}\hskip0.1cm}%
+}
+
+% Normal sidebar
+
+\defbeamertemplate*{sidebar right}{logoheader}
+{
+  \vfill%
+  \llap{\usebeamertemplate***{navigation symbols}\hskip0.1cm\insertlogo}%
+}
+
+%%% SETTINGS
+
+\setbeamersize{text margin left=1em,text margin right=1em}
+
+\mode
+<all>
